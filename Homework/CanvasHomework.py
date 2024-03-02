@@ -1,4 +1,4 @@
 #Program without API
-from Course import Course
-from Assignment import Assignment
+from Courses import Course
+from Assignments import Assignment
 
