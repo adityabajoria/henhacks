@@ -7,3 +7,4 @@ class Assignment:
     due_date: Date
     point: int
     weight: int
+    
