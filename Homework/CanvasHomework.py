@@ -1,9 +1,8 @@
-#Program without API
+#Import Statements
 from Courses import Course
 from Assignments import Assignment
+from OfficeHour import TeachingAssistant
+from Grade import GradeCategory
+from DateFormat import Date
+from PointByCategory import Point
 
-# load the environment 
-de.load_dotenv()
-
-# get the API key
-api_key = os.getenv(input("Enter your API key: "))
