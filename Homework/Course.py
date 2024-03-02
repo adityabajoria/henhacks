@@ -2,6 +2,8 @@ from dataclasses import dataclass
 from Assignment import Assignment
 from OfficeHour import TeachingAssistant
 from Grade import GradeCategory
+from DateFormat import Date
+from PointByCategory import Point
 
 @dataclass
 class Course:
@@ -9,4 +11,35 @@ class Course:
     enrolled_status: bool
     assignments: list[Assignment]
     office_hour: list[TeachingAssistant]
-    grade: list[GradeCategory]
+    grade: GradeCategory
+    total_point: Point
+
+#If somehow CanvasAPI can give all these input, it would be nice
+ken_schedule = [Course("ECON101", True, [Assignment("Equilibrium", Date(3,5,2024), 20, "Homework"), 
+                                         Assignment("Summative Exam 1", Date(4,11,2024), 150, "Exam"), 
+                                         Assignment("Market and Supply", Date(3,29,2024), 50, "Participation")], 
+                                         [TeachingAssistant("Bilal Raza", "Purnell 229", "4PM - 6PM")], GradeCategory(20,50,0,30)),
+                Course("CHEM112", True, [Assignment("Gen Chem 1", Date(3,25,2024), 45, "Homework"),
+                                         Assignment("Gen Chem 2", Date(3,26,2024), 55, "Lab"), 
+                                         Assignment("Gen Chem 3", Date(3,27,2024), 65, "Exam")], 
+                                         [TeachingAssistant("Dr. Shara Compton", "Brown 207", "1PM-2PM")], GradeCategory(30,40,20,10)),
+                Course("CHEM120", True, [Assignment("Statistic 1", Date(4,1,2024), 45, "Homework"),
+                                         Assignment("Calibration Curve", Date(3,30,2024), 55, "Homework"), 
+                                         Assignment("Analytical Method", Date(4,5,2024), 65, "Exam")], 
+                                         [TeachingAssistant("Connor Balickie", "CRC", "12:30PM-1:30PM")], GradeCategory(15,40,20,25)),
+                Course("HONR292", True, [Assignment("Preclass Question", Date(3,31,2024), 10, "Participation"),
+                                         Assignment("Essay Proposal", Date(4,3,2024), 85, "Homework"), 
+                                         Assignment("Ted Talk", Date(4,20,2024), 30, "Exam")], 
+                                         [TeachingAssistant("Dr. Michael Chajes", "S College Ave 186", "10AM - 11AM")], GradeCategory(40,30,0,30)),
+                Course("ENTR163", True, [Assignment("100 Uses of Rubber Band", Date(3,5,2024), 50, "Homework"),
+                                         Assignment("Curiousity List", Date(3,5,2024), 50, "Participation")], 
+                                         [TeachingAssistant("Dr. Laura", "VDC", "MWF 10-11AM")], GradeCategory(50,0,0,50)),
+                Course("CISC181", True, [Assignment("Homework 5", Date(3,8,2024), 45, "Homework"),
+                                         Assignment("Dr. Bart secret assignment", Date(3,15,2024), 1000, "Exam")], 
+                                         [TeachingAssistant("Faith Lowell", "Smith 202", "9-10AM")], GradeCategory(20,45,20,15)),
+                Course("HIST102", True, [Assignment("Midterm Essay", Date(3,16,2024), 75, "Exam"),
+                                         Assignment("Quiz 2", Date(3,4,2024), 100, "Exam")], 
+                                         [], GradeCategory(25, 60, 0, 15)),
+                Course("UNIV101", False, [], [], GradeCategory(0,0,0,0)),
+                Course("CISC108", False, [], [], GradeCategory(30,40,20,10)),
+                Course("CHEM164", False, [Assignment("Fake assignment", Date(3,3,2024), 100, "Homework")], [], GradeCategory(0,0,0,0))]

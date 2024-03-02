@@ -1,10 +1,6 @@
 #Program without API
-import requests
-import json
-import os
-import dotenv as de
-from Course import Course
-from Assignment import Assignment
+from Courses import Course
+from Assignments import Assignment
 
 # load the environment 
 de.load_dotenv()
