@@ -6,5 +6,5 @@ class Assignment:
     name: str
     due_date: Date
     point: int
-    type: str
+    types: str
     
