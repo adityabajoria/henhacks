@@ -8,11 +8,14 @@ class Assignment:
     point: int
     types: str
     
-def find_assignment(ken_schedule, course_name):
-    '''find all the assignments for a given course'''
+# create a function get_assignment_due_date that takes in ken_schedule and returns a list of the course with the earliest due date. 
+# sort the assignments and the course with the due date. the final result will be to print out the course with the earliest 
+# due date in order in the form of a list. 
+def get_all_assignment_due_date(ken_schedule):
+    '''get the course with the earliest due date'''
     assignments = []
-    for course in ken_schedule:
-        if course.name == course_name:
-            for assignment in course.assignments:
-                assignments.append(assignment.name)
+    for assignment in ken_schedule:
+        assignments.append(assignment.name, assignment.due_date)
+    assignments.sort(key=lambda x: x[1])
     return assignments
+
