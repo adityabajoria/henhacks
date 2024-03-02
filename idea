@@ -3,3 +3,10 @@ Canvas API (Schedule Sorting) - homework sorting - final grade calculation (more
 - final grade by using weightage 
 - timetable sorting 
 - using design package 
+
+Food Waste Reduction
+"""Build a website that models the statistics for food waste in CR every day/week/month"""
+- Track the amount of food waste every day
+- Categorize the type of food waste (seafood, fast food, grain...) to better adjust the serving portions.
+- Show statistics in day, week, month (pounds of waste
+- Comparison of food waste in days, week, month to track progress.
