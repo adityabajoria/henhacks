@@ -6,7 +6,7 @@ class Assignment:
     name: str
     due_date: Date
     point: int
-    type: str
+    types: str
     
 def find_assignment(ken_schedule, course_name):
     '''find all the assignments for a given course'''
