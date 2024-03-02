@@ -48,7 +48,7 @@ ui.markdown("# Assignments <br /> --- <br />")
 for i in assignments:
     with ui.column():
         ui.html("""
-        <div style="font-size:24px; padding:20px; background-color: silver;">
+        <div style="font-size:24px; padding:20px; background-color: #ddd;">
             <strong>
             """ + i.name + """
             </strong> -- <em style="font-size:20px;">(""" + i.course + """)</em>
