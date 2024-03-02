@@ -6,3 +6,4 @@ class GradeCategory:
     exam: float
     lab: float
     participation: float
+
