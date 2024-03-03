@@ -1,13 +1,12 @@
 from dataclasses import dataclass
 from Assignment import Assignment
-from OfficeHour import TeachingAssistant
 from DateFormat import Date
 from PointByCategory import Point
 from Weight import Weightages
+from OfficeHour import TeachingAssistant
 
 @dataclass
 class Course:
-    '''The following dataclass documents the course information. The course is as follows:'''
     name: str
     professor: str
     enrolled_status: bool
