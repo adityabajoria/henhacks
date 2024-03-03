@@ -5,9 +5,8 @@ class TeachingAssistant:
     name: str
     location: str
     time: str
-    
-# create a function takes in ken_course and returns a list of the course with their office hours. make sure to return the course with the office hours, 
-# use the helper function (find_date) to get the time of the office hours. 
+
+
 def get_all_course_office_hours(ken_course: list[Course]) -> list[str]:
     '''get all the course with the office hours'''
     office_hours = []

@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 from DateFormat import Date
-from Course import Course
 
 @dataclass
 class Assignment:
