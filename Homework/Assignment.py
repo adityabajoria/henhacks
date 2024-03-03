@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from DateFormat import Date
+from Course import Course
 
 @dataclass
 class Assignment:
@@ -11,8 +12,9 @@ class Assignment:
 def get_assignment_due_date(ken_schedule: list[Course]) -> list[Assignment]:
     '''get the course with the earliest due date'''
     assignments = []
-    for assignment in ken_schedule:
-        assignments.append(assignment.name, assignment.due_date, assignment.point, assignment.types)
-    assignments.sort(key=lambda x: x.due_date) # sorts the assignments by due date
+    for course in ken_schedule:
+        assignments.append(Assignment(course.name, course.due_date, course.point, course.types))
+    assignments.sort(key=lambda x: x.due_date)  # sorts the assignments by due date
     return assignments
+
 
