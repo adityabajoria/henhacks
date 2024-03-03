@@ -4,8 +4,8 @@ from grabAssignment import grab_all_assignment
 from sortAssignment import sort_assignment
 from taList import office_hour_list
 
-print(sort_assignment(grab_all_assignment(calculate_final_percent(ken_schedule))))
-print(office_hour_list(ken_schedule))
+# print(sort_assignment(grab_all_assignment(calculate_final_percent(ken_schedule))))
+# print(office_hour_list(ken_schedule))
 
 def compile_homeworks(schedule: list[Course]) -> list[str]:
     sorted_assignment_list = sort_assignment(grab_all_assignment(calculate_final_percent(schedule)))
@@ -17,7 +17,7 @@ def compile_homeworks(schedule: list[Course]) -> list[str]:
         compiled_text.append(text)
     return compiled_text
 
-print(compile_homeworks(ken_schedule))
+# print(compile_homeworks(ken_schedule))
 
 def compile_tas(schedule: list[Course]) -> list[str]:
     sorted_ta_list = office_hour_list(schedule)
@@ -39,7 +39,7 @@ def compile_tas(schedule: list[Course]) -> list[str]:
         compiled_text.append(text)
     return compiled_text
 
-print(compile_tas(ken_schedule))
+# print(compile_tas(ken_schedule))
 
 def combined_compiles(assignments: list[str], tas: list[str]) -> list[str]:
     full_report = []
@@ -49,7 +49,7 @@ def combined_compiles(assignments: list[str], tas: list[str]) -> list[str]:
         i += 1
     return full_report
 
-print(combined_compiles(compile_homeworks(ken_schedule), compile_tas(ken_schedule)))
+# print(combined_compiles(compile_homeworks(ken_schedule), compile_tas(ken_schedule)))
 
 def compile_to_string(report: list[str]) -> str:
     return "\n\n".join(report)
