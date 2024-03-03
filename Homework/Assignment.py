@@ -8,7 +8,7 @@ class Assignment:
     point: int
     types: str
     
-def get_assignment_due_date(ken_schedule):
+def get_assignment_due_date(ken_schedule: list[Course]) -> list[Assignment]:
     '''get the course with the earliest due date'''
     assignments = []
     for assignment in ken_schedule:
