@@ -4,7 +4,6 @@
 from nicegui import ui
 from Course import ken_schedule
 from Course import Assignment
-from Course import Course
 from DateFormat import Date
 from Main import grab_all_assignment
 from Course import grab_course_names
@@ -28,41 +27,25 @@ def sortByDueDate(dates):
 
 
 #Gives the fractional value of the impact an assignment has on the total grade. 
-#If course name doesn't match anything in 'courses', the function will return -1.0.
 def getAssignmentImpact(a:Assignment):
-    for course in courses:
-        if a.course == course.name:
-            #                             |
-            #Print statement for testing  |
-            #                             v
-            #print(str(a.points) + " / " + str(course.totalPoints) + " = " + str(a.points / course.totalPoints))
-            return a.points / course.totalPoints
-    else: return -1.0
-
-#Takes the assignment impact and turns it into a percentage to the nearest hundredth.
-#If course name doesn't match anything in 'courses', the function will return an empty string.
-def getImpactString(a:Assignment):
-    impact:float = getAssignmentImpact(a)
-    
-    if impact == -1.0: return ""
-    else: return str(impact*100)[:4] + "%"
+    return str(a.point)[:4] + "%"
 
 
 
-ui.markdown("# Assignments <br /> --- <br />")
+ui.markdown("# Assignments <br /> --- <br />").style("text-align:center; width: 40%; margin: auto;")
 
 
 
 with ui.column().classes("w-full"):
     for i in assignments:
         ui.html("""
-        <div class="assignment" style="font-size:24px; padding:20px; background-color: #ddd;">
+        <div class="assignment" style="font-size:24px; position: relative; padding:20px; background-color: #ddd;">
             <strong>
             """ + i.name + """
             </strong> -- <em style="font-size:20px;">(""" + i.course + """)</em>
-            <strong style="">""" + getImpactString(i) + """</strong>
+            <div style="position: absolute; right: 0; top:0; padding:20px; text-align: center;"><p><strong style="padding: 0; font-size: 24px;">""" + getAssignmentImpact(i) + """</strong></p><p style="font-size: 50%;">of final grade</p></div>
             <figcaption style="text-align:left; font-size:18px"> Due 
-            """ + dueDateToString(i.due) + """
+            """ + dueDateToString(i.due_date) + """
             </figcaption>
         </div>
         """).style("width: 40%; margin: auto;")
