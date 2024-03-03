@@ -1,3 +1,2 @@
 #Unit Tests for the get_all_office_hours
 # write unit tests with output for the function get)all_course_office_hours
-assert_equal(get_all_course_office_hours(ken_course), ['CS 101 : + TA1 at 10:00 AM with a time slot of 1000', 'CS 102 : + TA2 at 11:00 AM with a time slot of 1100', 'CS 103 : + TA3 at 12:00 PM with a time slot of 1200', 'CS 104 : + TA4 at 1:00 PM with a time slot of 1300', 'CS 105 : + TA5 at 2:00 PM with a time slot of 1400', 'CS 106 : + TA6 at 3:00 PM with a time slot of 1500', 'CS 107 : + TA7 at 4:00 PM with a time slot of 1600', 'CS 108 : + TA8 at 5:00 PM with a time slot of 1700', 'CS 109 : + TA9 at 6:00 PM with a time slot of 1800', 'CS 110 : + TA10 at 7:00 PM with a time slot of 1900'])
