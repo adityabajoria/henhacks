@@ -1,3 +1,7 @@
+'''
+
+'''
+
 from dataclasses import dataclass
 
 @dataclass
@@ -6,4 +10,5 @@ class GradeCategory:
     exam: float
     lab: float
     participation: float
+
 

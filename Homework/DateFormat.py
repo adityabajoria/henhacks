@@ -7,7 +7,7 @@ class Date:
     year: int
     
 
-# Helper function to determine which date is earlier or later
+# Helper function to determine the date value
 def date_value(date:Date) -> int:
     """
     31 given for month to ensure 1-31 has less value than 2-1
