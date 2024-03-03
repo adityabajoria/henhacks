@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from Assignment import Assignment
 from OfficeHour import TeachingAssistant
-from Grade import GradeCategory
 from DateFormat import Date
 from PointByCategory import Point
 
@@ -11,8 +10,8 @@ class Course:
     name: str
     professor: str
     enrolled_status: bool
-    assignments: list[Assignment]
-    office_hour: list[TeachingAssistant]
+    assignments: list(Assignment)
+    office_hour: list(TeachingAssistant)
     grade: GradeCategory
     total_point: Point
 
@@ -53,3 +52,9 @@ ken_schedule = [Course("ECON101", "Dr. Bender", True, [Assignment("Equilibrium",
                 Course("CISC108", "Dr. Bart", False, [], [], GradeCategory(0.30, 0.40, 0.20, 0.10), Point(0,0,0,0)),
                 Course("CHEM164", "Dr. Genova", False, [Assignment("Fake assignment", Date(3,3,2024), 100, "Homework")], [], 
                        GradeCategory(0.0, 0.0, 0.0, 0.0), Point(0,0,0,0))]
+
+def grab_course_names(schedule: list(Course)) -> list(str):
+    courses = []
+    for i in schedule:
+        courses.append(i.name)
+    return courses
