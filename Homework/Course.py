@@ -10,8 +10,8 @@ class Course:
     name: str
     professor: str
     enrolled_status: bool
-    assignments: "list[Assignment]"
-    office_hour: "list[TeachingAssistant]"
+    assignments: list[Assignment]
+    office_hour: list[TeachingAssistant]
     weights: Weightages
     total_point: Point
 
