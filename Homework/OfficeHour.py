@@ -6,11 +6,8 @@ class TeachingAssistant:
     location: str
     time: str
 
-"""
-def get_all_course_office_hours(ken_course: list[Course]) -> list[str]:
-    '''get all the course with the office hours'''
-    office_hours = []
-    for course in ken_course:
-        office_hours.append(f"{course.name} : + {course.office_hours.name} at {course.office_hours.location} with a time slot of {date_value(course.office_hours.time)}")
-    return office_hours
-"""
+def extract_ta_info(tas: list[TeachingAssistant]) -> tuple:
+    ta_info = []
+    for ta in tas:
+        ta_info.append(f"{ta.name}__{ta.location}__{ta.time}")
+    return tuple(ta_info)
