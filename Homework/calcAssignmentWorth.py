@@ -2,6 +2,10 @@ from Course import Course
 from updateTotalPoint import update_total_point
 
 def calculate_final_percent(schedule: list[Course]) -> list[Course]:
+    """
+    Return the current value of an assignment in form of final grade.
+    The final grade that will be lost if the assignment is ignored.
+    """
     for course in update_total_point(schedule):
         if course.enrolled_status:
             for assignment in course.assignments:

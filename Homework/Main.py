@@ -8,6 +8,9 @@ from taList import office_hour_list
 # print(office_hour_list(ken_schedule))
 
 def compile_homeworks(schedule: list[Course]) -> list[str]:
+    """
+    Convert the schedule into text form after the assignments are sorted by due date.
+    """
     sorted_assignment_list = sort_assignment(grab_all_assignment(calculate_final_percent(schedule)))
     compiled_text = []
     for assignment in sorted_assignment_list:
@@ -20,6 +23,10 @@ def compile_homeworks(schedule: list[Course]) -> list[str]:
 # print(compile_homeworks(ken_schedule))
 
 def compile_tas(schedule: list[Course]) -> list[str]:
+    """
+    Extract TAs info for each course from into list of string,
+    respective to the order of sorted assignment list.
+    """
     sorted_ta_list = office_hour_list(schedule)
     compiled_text = []
     for ta in sorted_ta_list:
@@ -42,6 +49,9 @@ def compile_tas(schedule: list[Course]) -> list[str]:
 # print(compile_tas(ken_schedule))
 
 def combined_compiles(assignments: list[str], tas: list[str]) -> list[str]:
+    """
+    Combined the sorted assignment list and TAs list into one.
+    """
     full_report = []
     i = 0
     while i < len(assignments):
@@ -52,6 +62,9 @@ def combined_compiles(assignments: list[str], tas: list[str]) -> list[str]:
 # print(combined_compiles(compile_homeworks(ken_schedule), compile_tas(ken_schedule)))
 
 def compile_to_string(report: list[str]) -> str:
+    """
+    Convert the final list into string form, ready to be exported to website.
+    """
     return "\n\n".join(report)
 
 print(compile_to_string(combined_compiles(compile_homeworks(ken_schedule), compile_tas(ken_schedule))))

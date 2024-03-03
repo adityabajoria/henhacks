@@ -16,6 +16,8 @@ class Course:
     total_point: Point
 
 #COURSE DATA
+#Preferably we could have use CanvasAPI to pull all the data needed below. 
+#However, the process was complex so we only build the model of the program itself.
 ken_schedule = [Course("ECON101", "Dr. Bender", True, [Assignment("Equilibrium", Date(3,5,2024), 20, "Homework", 0.0), 
                                          Assignment("Summative Exam 1", Date(4,11,2024), 150, "Exam", 0.0), 
                                          Assignment("Market and Supply", Date(3,29,2024), 50, "Participation", 0.0)], 
