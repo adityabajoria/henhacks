@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Date:
+    '''The following dataclass documents the date of the assignment. The date is as follows:'''
     month: int
     day: int
     year: int

@@ -7,6 +7,7 @@ from PointByCategory import Point
 
 @dataclass
 class Course:
+    '''The following dataclass documents the course information. The course is as follows:'''
     name: str
     professor: str
     enrolled_status: bool
@@ -15,7 +16,7 @@ class Course:
     grade: GradeCategory
     total_point: Point
 
-#If somehow CanvasAPI can give all these input, it would be nice
+#COURSE DATA
 ken_schedule = [Course("ECON101", "Dr. Bender", True, [Assignment("Equilibrium", Date(3,5,2024), 20, "Homework"), 
                                          Assignment("Summative Exam 1", Date(4,11,2024), 150, "Exam"), 
                                          Assignment("Market and Supply", Date(3,29,2024), 50, "Participation")], 
