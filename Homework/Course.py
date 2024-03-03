@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 from Assignment import Assignment
-from OfficeHour import TeachingAssistant
 from DateFormat import Date
 from PointByCategory import Point
 from Weight import Weightages
