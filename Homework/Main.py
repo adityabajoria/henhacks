@@ -13,7 +13,7 @@ def compile_homeworks(schedule: list[Course]) -> list[str]:
     for assignment in sorted_assignment_list:
         text = (f"Assignment '{assignment.name}' is due on {assignment.due_date.month}"
                 f"/{assignment.due_date.day}/{assignment.due_date.year}"
-                f" and worths {round(assignment.final_grade_value*100,2)}% of the final grade.")
+                f" and currently worths {round(assignment.final_grade_value*100,2)}% of the final grade.")
         compiled_text.append(text)
     return compiled_text
 
