@@ -3,6 +3,7 @@ from Assignment import Assignment
 from DateFormat import Date
 from PointByCategory import Point
 from Weight import Weightages
+from OfficeHour import TeachingAssistant
 
 @dataclass
 class Course:
