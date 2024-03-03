@@ -1,15 +1,14 @@
-from Course import Course
+from Course import Course, ken_schedule
 from Assignment import Assignment
-from Course import ken_schedule
 
-
-def grab_all_assignment(ken_schedule: list(Course)) -> list(Assignment):
+def grab_all_assignment(schedule: list[Course]) -> list[Assignment]:
     assignment_list = []
-    for course in ken_schedule:
+    for course in schedule:
         for assignment in course.assignments:
             assignment_list.append(assignment)
     return assignment_list
 
+print(grab_all_assignment(ken_schedule))
 
 
 

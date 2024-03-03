@@ -6,12 +6,11 @@ from Weight import Weightages
 
 @dataclass
 class Course:
-    '''The following dataclass documents the course information. The course is as follows:'''
     name: str
     professor: str
     enrolled_status: bool
-    assignments: list(Assignment)
-    office_hour: list(TeachingAssistant)
+    assignments: list[Assignment]
+    office_hour: list[TeachingAssistant]
     weights: Weightages
     total_point: Point
 
@@ -52,9 +51,3 @@ ken_schedule = [Course("ECON101", "Dr. Bender", True, [Assignment("Equilibrium",
                 Course("CISC108", "Dr. Bart", False, [], [], Weightages(0.30, 0.40, 0.20, 0.10), Point(0,0,0,0)),
                 Course("CHEM164", "Dr. Genova", False, [Assignment("Fake assignment", Date(3,3,2024), 100, "Homework")], [], 
                        Weightages(0.0, 0.0, 0.0, 0.0), Point(0,0,0,0))]
-
-def grab_course_names(ken_schedule: list(Course)) -> list(str):
-    courses = []
-    for i in ken_schedule:
-        courses.append(i.name)
-    return courses
