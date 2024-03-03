@@ -1,3 +1,0 @@
-# unit tests
-# write unit tests for the function get_assignment_due_date(ken_schedule) with the output 
-assert_equal(get_assignment_due_date([Assignment('assignment1', Date(1, 1, 2023), 100, 'homework')]), [Assignment('assignment1', Date(1, 1, 2023), 100, 'homework')])

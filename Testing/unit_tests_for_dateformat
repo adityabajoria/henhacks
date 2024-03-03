@@ -1,0 +1,8 @@
+# Unit Tests for DateFormat.py 
+# write the unit test for the DateFormat.py file
+assert_equal(date_value(Date(1,1,2023)), 20230101)
+assert_equal(date_value(Date(0, 0, 2022)), 20220000)
+assert_equal(date_value(Date(12, 31, 2023)), 20231231)
+assert_equal(date_value(Date(1, 1, 2024)), 20240101)
+assert_equal(date_value(Date(2, 1, 2024)), 20240201)
+assert_equal(date_value(Date(12, 31, 2018)), 20181231)
