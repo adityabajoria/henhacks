@@ -1,9 +1,13 @@
-from Course import ken_schedule
-from nicegui import ui
-from random import randint
+from Course import ken_schedule, Course
+from Assignment import Assignment
 
-# create a main function that uses nicegui to display only the title as "Updated Canvas Interface" and the body as "Welcome to the updated Canvas Interface"
-def main():
-    '''display the title and body of the updated canvas interface'''
-    
-    
+
+def grab_all_assignment(schedule: list[Course]) -> list[Assignment]:
+    assignment_list = []
+    for course in schedule:
+        for assignment in course.assignments:
+            assignment_list.append(assignment)
+    return assignment_list
+
+
+
