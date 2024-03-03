@@ -1,6 +1,6 @@
 from Course import Course
 from Assignment import Assignment
-import pandas as pd
+from Course import ken_schedule
 
 
 def grab_all_assignment(schedule: list(Course)) -> list(Assignment):
