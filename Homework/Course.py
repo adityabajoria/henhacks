@@ -54,8 +54,8 @@ ken_schedule = [Course("ECON101", "Dr. Bender", True, [Assignment("Equilibrium",
                 Course("CHEM164", "Dr. Genova", False, [Assignment("Fake assignment", Date(3,3,2024), 100, "Homework")], [], 
                        Weightages(0.0, 0.0, 0.0, 0.0), Point(0,0,0,0))]
 
-def grab_course_names(schedule: list(Course)) -> list(str):
+def grab_course_names(ken_schedule: list(Course)) -> list(str):
     courses = []
-    for i in schedule:
+    for i in ken_schedule:
         courses.append(i.name)
     return courses
